@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  app:
+    image: titusfrezer/addis-software-test-project-app
+    environment:
+      - NODE_ENV=production
+      - MONGO_URI=mongodb://host.docker.internal:27017/testdb
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    container_name: express_mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=testdb
+    # You may include additional MongoDB configuration here
