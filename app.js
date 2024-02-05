@@ -15,7 +15,6 @@ app.listen(port, () => {
 });
 
 mongoose
-  .connect("mongodb://host.docker.internal:27017/testdb")
-  .then((result) => console.log("Connected to MongoDB"))
+  .connect("mongodb://127.0.0.1:27017/testdb")
+  .then((result) => console.log("I am connected"))
   .catch((err) => console.error(err));
-
