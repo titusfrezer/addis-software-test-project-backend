@@ -15,6 +15,6 @@ app.listen(port, () => {
 });
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/testdb")
+  .connect("mongodb+srv://titus:ydenTlaH0I96pwuC@cluster0.embp1mk.mongodb.net/")
   .then((result) => console.log("I am connected"))
   .catch((err) => console.error(err));
