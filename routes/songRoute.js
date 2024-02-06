@@ -9,4 +9,6 @@ router.post("/",songController.addSong);
 router.put("/:id",songController.editSong);
 
 router.delete("/:id",songController.deleteSong);
+
+router.get("/stats",songController.totalNumberOfSongs);
 module.exports = router;
